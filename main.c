@@ -28,7 +28,7 @@ static Vector2 mousePosition;
 static Color currentColor = { 0 };
 
 // -------------------------------------------
-// All painted fields are represented in as 1 in 'status[fields][fields]'and all unpainted are represented as 0
+// All already painted fields are represented in as 1 in 'status[fields][fields]'and all unpainted are represented as 0
 // -------------------------------------------
 static box boxes[fields][fields];
 static int status[fields][fields];
@@ -181,14 +181,14 @@ void DrawGame(void){
                 }
             }
 
-            // Draw Mouse Position and the frame
+            // Draw Mouse Position and a frame
             DrawCircleV(mousePosition, 3, MAROON);
-            DrawRectangleLinesEx( (Rectangle){spaceBorders-5, upperSpace, (fields * boxSize) + 5, (fields * boxSize) + 5}, 5, BLACK);
+            DrawRectangleLinesEx( (Rectangle){spaceBorders-5, upperSpace-5, (fields * boxSize) + 10, (fields * boxSize) + 10}, 5, BLACK);
 
             // Draw stats
             DrawText("Flood-It", GetScreenWidth()/2 - MeasureText("Flood-It", 25)/2, 15, 30, BLACK);
-            DrawText(FormatText("TURNS REMAIN:\n      %d/%d", count, max_count), spaceBorders, 435, 20, BLACK);
-            DrawText(FormatText("FIELDS FILLED:\n      %d/%d", fields_painted, fields * fields), 275, 435, 20, BLACK);
+            DrawText(FormatText("TURNS REMAIN:\n         %d/%d", count, max_count), spaceBorders, 400, 19, BLACK);
+            DrawText(FormatText("FIELDS FILLED:\n         %d/%d", fields_painted, fields * fields), 265, 400, 19, BLACK);
         }
 
         else{
