@@ -1,3 +1,3 @@
 # Flood-It
-A simple clone of the Flood-It game - made with raylib
+A simple clone of the Flood-It game - made with raylib 3.5
 
