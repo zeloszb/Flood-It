@@ -28,7 +28,7 @@
 *       [core] rglfw (github.com/glfw/glfw) for window/context management and input (only PLATFORM_DESKTOP)
 *       [rlgl] glad (github.com/Dav1dde/glad) for OpenGL 3.3 extensions loading (only PLATFORM_DESKTOP)
 *       [raudio] miniaudio (github.com/dr-soft/miniaudio) for audio device/context management
-*
+* 
 *   OPTIONAL DEPENDENCIES (included):
 *       [core] rgif (Charlie Tangora, Ramon Santamaria) for GIF recording
 *       [textures] stb_image (Sean Barret) for images loading (BMP, TGA, PNG, JPEG, HDR...)
