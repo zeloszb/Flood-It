@@ -28,7 +28,7 @@ static Vector2 mousePosition;
 static Color currentColor = { 0 };
 
 // -------------------------------------------
-// All already painted fields are represented in as 1 in 'status[fields][fields]'and all unpainted are represented as 0
+// All painted fields are represented in as 1 in 'status[fields][fields]'and all unpainted are represented as 0
 // -------------------------------------------
 static box boxes[fields][fields];
 static int status[fields][fields];
