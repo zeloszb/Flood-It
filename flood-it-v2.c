@@ -83,7 +83,6 @@ int main(void)
         // Update and Draw Game
         UpdateGame();
         DrawGame();
-        
     }
 
     // Close window and OpenGL context
@@ -92,7 +91,7 @@ int main(void)
     return 0;
 }
 
-// Calc
+// Calc max attempts
 int CalcMaxCounter(int fields, int current_pallet){
     if (fields == 4) return 10;
     if (fields == 6) return 12;
