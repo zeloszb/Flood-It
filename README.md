@@ -5,7 +5,7 @@ The basic version can be found in flood-it.c and an advanced version with change
 Compile it with:
 > gcc flood-it-v2.c -o game.exe -O1 -Wall -std=c99 -Wno-missing-braces -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
 
-######Preview: <br>
+###### Preview: <br>
 
 ![color_anim2](https://user-images.githubusercontent.com/79079495/116678760-021e3280-a9aa-11eb-93a8-5d99e682033c.gif)
 
