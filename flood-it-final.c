@@ -106,7 +106,6 @@ int main(void)
         // Update and Draw Game
         UpdateGame();
         DrawGame();
-        
     }
 
     // Close window and OpenGL context
@@ -355,7 +354,8 @@ void DrawGame(void){
     EndDrawing();
 }
 
-// Function to calulate the minimum number of moves, based on the maximum amount of colors around the painted colors
+// Function to calulate the minimum number of moves, based on the maximum amount of colors around the painted fields
+// ******** Note: The algorythm isn't perfect, so there are some mistakes sometimes ******** 
 int calcMinMoves(int pallet_length, Color pallet[], box boxcopy[128][128]){
 
     // Initalize a copy of the status
@@ -379,8 +379,7 @@ int calcMinMoves(int pallet_length, Color pallet[], box boxcopy[128][128]){
         ccounter[t].color.g = pallet[t].g;
         ccounter[t].color.b = pallet[t].b;
         ccounter[t].color.a = pallet[t].a;
-        ccounter[t].amount = 0; 
-        
+        ccounter[t].amount = 0;
     }
 
     // Define some variables (most of them are just copys)
