@@ -33,11 +33,6 @@ static int spaceBorders;
 static int minmoves;
 static int moves;
 
-static int timer;
-static int frame;
-static float frameWidth;
-static int maxFrames;
-
 static int dropdownBoxActive1;
 static int dropdownBoxActive2;
 
@@ -53,7 +48,6 @@ static bool pressed = false;
 static bool gameover = false;
 static bool win = false;
 
-static Texture2D croneSprite;
 static Texture2D crone_single;
 static Texture2D empty_crone;
 
@@ -131,10 +125,6 @@ void InitGame(void){
     fields_painted = 0;
     mousePosition = (Vector2){0.0f, 0.0f};
     spaceBorders = (screenWidth - fields * boxSize) / 2;
-    timer = 0.0f;
-    frame = 0;
-    frameWidth = (float)(croneSprite.width / 6);
-    maxFrames = (int)(croneSprite.width) / (int)(frameWidth);
 
 
     // Color pallets
@@ -299,7 +289,7 @@ void DrawGame(void){
             // Draw stats and text
             DrawText("Flood-It", GetScreenWidth()/2 - MeasureText("Flood-It", 25)/2, 15, 30, BLACK);
             DrawText("Theme:", 95, 60, 20, BLACK);
-            DrawText("Size:", spaceBorders, 60, 20, BLACK);
+            DrawText("Size:", 228, 60, 20, BLACK);
             DrawText("New Game:", 365, 60, 20, BLACK);
 
             DrawText(FormatText("Moves:\n   %d", moves), 140, (upperSpace + (fields * boxSize) + 20), 19, BLACK);
@@ -312,7 +302,7 @@ void DrawGame(void){
             }
 
             // Size selection
-            if (GuiDropdownBox((Rectangle){ spaceBorders, 85, 110, 20}, choices, &dropdownBoxActive1, dropdownEditMode1)){
+            if (GuiDropdownBox((Rectangle){ 228, 85, 110, 20}, choices, &dropdownBoxActive1, dropdownEditMode1)){
                 dropdownEditMode1 = !dropdownEditMode1;
 
                 if (dropdownBoxActive1 == 0)  new_fields = 4;
